@@ -54,6 +54,7 @@ if __name__=="__main__":
     sobelxfreq=filterToFrequency(sobelx,s=img.shape)
     sobelyfreq=filterToFrequency(sobely,s=img.shape)
     
+    #รูปต้องทำเป็น mag ก่อนถึงจะพร้อมเอาไป x
     mag_sobelx=filterfrequencyToMagnitude(sobelxfreq)
     mag_sobely=filterfrequencyToMagnitude(sobelyfreq)
     
