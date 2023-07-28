@@ -19,4 +19,12 @@ if __name__ == "__main__":
     img=cv.imread("./mushroom.png",cv.IMREAD_GRAYSCALE)
     gaussian = getgaussian()
     img_freq = fr.imgToFrequency(img)
-    gaussian_freq
+    gaussian_freq = fr.filterToFrequency(gaussian)
+    blur_img = img_freq * gaussian_freq
+    repaired_img = img_freq / gaussian_freq
+    
+    
+    
+    cv.imshow("original",img)
+    cv.imshow("blur",blur_img)
+    cv.imshow("repaired",repaired_img)
